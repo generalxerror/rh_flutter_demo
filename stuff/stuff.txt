@@ -1,0 +1,12 @@
+catfacts
+
+final MainController _mainController = Get.put(MainController());
+
+
+floatingActionButton: FloatingActionButton(
+        child: const Text('get'),
+        onPressed: () async {
+          var test = await _mainController.getAllCatFacts();
+          inspect(test);
+        }
+      ),
