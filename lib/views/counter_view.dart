@@ -10,9 +10,6 @@ class CounterView extends StatefulWidget {
   @override
   State<CounterView> createState() => _CounterViewState();
 }
-
-// Ask to refactor to use main controller
-
 class _CounterViewState extends State<CounterView> {
   int count = 0;
 
@@ -22,9 +19,7 @@ class _CounterViewState extends State<CounterView> {
       floatingActionButton: FloatingActionButton(
         child: const Text('ggez'),
         onPressed: () {
-          // log show correct, screen doesnt, why?
           count++;
-          log(count.toString());
         }
       ),
       body: SafeArea(
