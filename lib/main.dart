@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:rh_flutter_demo/views/counter_view.dart';
-import 'package:rh_flutter_demo/views/catfacts_view.dart';
 import 'package:rh_flutter_demo/views/splash_view.dart';
 
 Future<void> main() async {
@@ -15,13 +12,8 @@ class AssetsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      home: SplashView(),
-      getPages: [
-        GetPage(name: '/splash', page: () => SplashView()),
-        GetPage(name: '/counter', page: () => CounterView()),
-        GetPage(name: '/catfacts', page: () => CatFactsView()),
-      ],
+    return MaterialApp(
+      home: SplashView()
     );
   }
 }

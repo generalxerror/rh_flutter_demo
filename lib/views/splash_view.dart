@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:rh_flutter_demo/views/catfacts_view.dart';
+import 'package:rh_flutter_demo/views/counter_view.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({
@@ -21,7 +22,10 @@ class SplashView extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Get.toNamed('/counter');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const CounterView()),
+                  );
                 },
                 child: const Text(
                   'Counter'
@@ -29,7 +33,10 @@ class SplashView extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Get.toNamed('/catfacts');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CatFactsView()),
+                  );
                 },
                 child: const Text(
                   'Cat Facts'
